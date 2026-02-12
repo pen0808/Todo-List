@@ -68,11 +68,16 @@ function renderTodo1(){
     const todoObj1 = todoArray2[i];
 
     // create html elements
-    const htmlEl1 = `<div class="container">
+    const htmlEl1 = `
     <div class="todo">${todoObj1.todoValue}</div>
     <div class="dateEl">${todoObj1.dateValue}</div>
-    <button>Add</button
-    </div>`
+    <button onclick="
+      todoArray2.splice(${i}, 1);
+      renderTodo1();
+     ">
+     Delete
+    </button
+    `
     todoHTML1 += htmlEl1;
   }
   mainContainer1.innerHTML = todoHTML1;
