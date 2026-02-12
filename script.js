@@ -59,6 +59,7 @@ function addTodo2(){
   console.log(todoArray2);
   inputEl2.value = "";
   dateEl.value = "";
+  renderTodo1();
 }
 
 function renderTodo1(){
@@ -68,9 +69,12 @@ function renderTodo1(){
 
     // create html elements
     const htmlEl1 = `<div class="container">
-    <div>${todoObj1.todoValue}</div>
-    <div>${todoObj1.dateValue}</div>
+    <div class="todo">${todoObj1.todoValue}</div>
+    <div class="dateEl">${todoObj1.dateValue}</div>
     <button>Add</button
     </div>`
+    todoHTML1 += htmlEl1;
   }
+  mainContainer1.innerHTML = todoHTML1;
 }
+renderTodo1();
