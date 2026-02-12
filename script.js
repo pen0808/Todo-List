@@ -64,12 +64,12 @@ function addTodo2(){
 function renderTodo1(){
   let todoHTML1 = "";
   for(let i=0; i<todoArray2.length; i++){
-    const todo = todoArray2[i];
+    const todoObj1 = todoArray2[i];
 
     // create html elements
     const htmlEl1 = `<div class="container">
-    <div></div>
-    <div></div>
+    <div>${todoObj1.todoValue}</div>
+    <div>${todoObj1.dateValue}</div>
     <button>Add</button
     </div>`
   }
